@@ -82,13 +82,3 @@ ROLE_ID=$(curl -s --header "X-Vault-Token: ${VAULT_TOKEN}" \
 
 SECRET_ID=$(curl -s -X POST --header "X-Vault-Token: ${VAULT_TOKEN}" \
   "${VAULT_ADDR}/v1/auth/${APPROLE_MOUNT_PATH}/role/${APPROLE_NAME}/secret-id" | jq -r '.data.secret_id')
-
-echo ""
-echo "=================================================="
-echo "          SETUP AUTOMATION SELESAI                "
-echo "=================================================="
-echo "Auth Method Path : auth/${APPROLE_MOUNT_PATH}/"
-echo "Role Name        : ${APPROLE_NAME}"
-echo "Role ID          : ${ROLE_ID}"
-echo "Secret ID        : ${SECRET_ID}"
-echo "=================================================="
