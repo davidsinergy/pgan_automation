@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-# Hentikan eksekusi jika terjadi error
 set -e
 
-# --- KONFIGURASI ---
 VAULT_ADDR="http://jkt-vault1:8200"
-# Pastikan variabel VAULT_TOKEN sudah diexport di environment terminal Anda
-# export VAULT_TOKEN="hvs.xxx..."
 
-SECRET_ENGINE_PATH="sip-testing-restAPI"
+SECRET_ENGINE_PATH="agen-syariah-ms-secret"
 SECRET_PATH="my-app/config"
 POLICY_NAME="my-app-policy-${SECRET_ENGINE_PATH}"
 APPROLE_MOUNT_PATH="my-app-role-${SECRET_ENGINE_PATH}"
