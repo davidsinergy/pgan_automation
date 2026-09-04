@@ -4,11 +4,11 @@ set -e
 
 VAULT_ADDR="http://jkt-vault1:8200"
 
-SECRET_ENGINE_PATH="omni22-agen-syariah"
+SECRET_ENGINE_PATH="omni33-agen-syariah"
 SECRET_PATH="my-app/config"
-POLICY_NAME="my-app-policy-omni22-agen-syariah"
-APPROLE_MOUNT_PATH="my-app-role-omni22-agen-syariah"
-APPROLE_NAME="my-app-role-omni22-agen-syariah"
+POLICY_NAME="my-app-policy-omni33-agen-syariah"
+APPROLE_MOUNT_PATH="my-app-role-omni33-agen-syariah"
+APPROLE_NAME="my-app-role-omni33-agen-syariah"
 APPROLE_DESC="AppRole Authentication Engine"
 
 
