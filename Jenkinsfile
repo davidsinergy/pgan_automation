@@ -13,7 +13,7 @@ pipeline {
         stage('2. Prepare & Execute Script') {
             steps {
                 sh 'chmod +x hv_api2.sh'
-                sh './hv_api.sh'
+                sh './hv_api2.sh'
             }
         }
     }
