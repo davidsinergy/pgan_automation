@@ -10,11 +10,11 @@ if [[ -z "${VAULT_TOKEN:-}" ]]; then
 fi
 
 VAULT_ADDR="http://jkt-vault1:8200"
-SECRET_ENGINE_PATH="omni55-agen-syariah"
+SECRET_ENGINE_PATH="omni66-agen-syariah"
 SECRET_PATH="my-app/config"
-POLICY_NAME="my-app-policy-omni55-agen-syariah"
-APPROLE_MOUNT_PATH="my-app-role-omni55-agen-syariah"
-APPROLE_NAME="my-app-role-omni55-agen-syariah"
+POLICY_NAME="my-app-policy-omni66-agen-syariah"
+APPROLE_MOUNT_PATH="my-app-role-omni66-agen-syariah"
+APPROLE_NAME="my-app-role-omni66-agen-syariah"
 APPROLE_DESC="AppRole Authentication Engine"
 
 echo "=== 1. Mengaktifkan KV Secrets Engine v2 via cURL ==="
