@@ -10,11 +10,11 @@ if [[ -z "${VAULT_TOKEN:-}" ]]; then
 fi
 
 VAULT_ADDR="http://jkt-vault1:8200"
-SECRET_ENGINE_PATH="omni66-agen-syariah"
+SECRET_ENGINE_PATH="omni77-agen-BelumSyariah"
 SECRET_PATH="my-app/config"
-POLICY_NAME="my-app-policy-omni66-agen-syariah"
-APPROLE_MOUNT_PATH="my-app-role-omni66-agen-syariah"
-APPROLE_NAME="my-app-role-omni66-agen-syariah"
+POLICY_NAME="my-app-policy-${SECRET_ENGINE_PATH}"
+APPROLE_MOUNT_PATH="my-app-role-${SECRET_ENGINE_PATH}"
+APPROLE_NAME="my-app-role-${SECRET_ENGINE_PATH}"
 APPROLE_DESC="AppRole Authentication Engine"
 
 echo "=== 1. Mengaktifkan KV Secrets Engine v2 via cURL ==="
@@ -40,7 +40,7 @@ echo "=== 3. Membuat Policy via cURL ==="
 # OPTIMASI: Menggunakan Heredoc agar karakter newline asli tidak rusak saat diparse Vault
 POLICY_HCL=$(cat <<EOF
 path "${SECRET_ENGINE_PATH}/data/${SECRET_PATH}" {
-  capabilities = ["read","write"]
+  capabilities = ["read"]
 }
 EOF
 )
