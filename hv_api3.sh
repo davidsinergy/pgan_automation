@@ -9,9 +9,12 @@ if [[ -z "${VAULT_TOKEN:-}" ]]; then
     exit 1
 fi
 
-POLICY_NAME="policy-${SECRET_ENGINE_PATH}"
-APPROLE_MOUNT_PATH="approle-${SECRET_ENGINE_PATH}" # Disarankan tetap 'approle' agar tidak memenuhi Raft storage
-APPROLE_NAME="approle-${SECRET_ENGINE_PATH}"
+VAULT_ADDR="http://jkt-vault1:8200"
+SECRET_ENGINE_PATH="omni77-agen-BelumSyariah"
+SECRET_PATH="my-app/config"
+POLICY_NAME="my-app-policy-${SECRET_ENGINE_PATH}"
+APPROLE_MOUNT_PATH="my-app-role-${SECRET_ENGINE_PATH}"
+APPROLE_NAME="my-app-role-${SECRET_ENGINE_PATH}"
 APPROLE_DESC="AppRole Authentication Engine"
 
 echo "=== 1. Mengaktifkan KV Secrets Engine v2 via cURL ==="
